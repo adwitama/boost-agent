@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tripla-boost-agent"
+version = "0.1.0"
+description = "Safe, fixture-only MCP demonstration for tripla Boost"
+requires-python = ">=3.11"
+dependencies = ["mcp[cli]>=2.0.0,<3.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+boost-agent = "boost_agent.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.7",
+]

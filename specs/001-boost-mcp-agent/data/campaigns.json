@@ -1,0 +1,392 @@
+[
+  {
+    "campaign_id": "KYO-A",
+    "hotel_id": "JP-KYO-001",
+    "platform": "google",
+    "name": "Kyoto Branded Search",
+    "monthly_budget_jpy": 100000,
+    "spend_30d_jpy": 100000,
+    "clicks_30d": 800,
+    "gross_attributed_booking_value_jpy": 320000,
+    "attributed_bookings": 8,
+    "rule_tags": [
+      "cancellation_high"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "KYO-B",
+    "hotel_id": "JP-KYO-001",
+    "platform": "google",
+    "name": "Kyoto Generic Travel Search",
+    "monthly_budget_jpy": 100000,
+    "spend_30d_jpy": 100000,
+    "clicks_30d": 650,
+    "gross_attributed_booking_value_jpy": 300000,
+    "attributed_bookings": 6,
+    "rule_tags": [
+      "better_retained_contribution"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-001",
+    "hotel_id": "JP-DEMO-002",
+    "platform": "yahoo",
+    "name": "Tokyo Demo Hotel 2 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 218,
+    "gross_attributed_booking_value_jpy": 95750,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "missing_attribution"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-002",
+    "hotel_id": "JP-DEMO-003",
+    "platform": "meta",
+    "name": "Nagoya Demo Hotel 3 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 226,
+    "gross_attributed_booking_value_jpy": 96500,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "cancellation_high"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-003",
+    "hotel_id": "JP-DEMO-004",
+    "platform": "google",
+    "name": "Osaka Demo Hotel 4 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 234,
+    "gross_attributed_booking_value_jpy": 97250,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "report_due"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-004",
+    "hotel_id": "JP-DEMO-005",
+    "platform": "yahoo",
+    "name": "Sapporo Demo Hotel 5 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 90000,
+    "clicks_30d": 242,
+    "gross_attributed_booking_value_jpy": 98000,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "pacing_high"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-005",
+    "hotel_id": "JP-DEMO-006",
+    "platform": "meta",
+    "name": "Fukuoka Demo Hotel 6 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 250,
+    "gross_attributed_booking_value_jpy": 0,
+    "attributed_bookings": 0,
+    "rule_tags": [
+      "missing_attribution"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-006",
+    "hotel_id": "JP-DEMO-007",
+    "platform": "google",
+    "name": "Kanazawa Demo Hotel 7 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 258,
+    "gross_attributed_booking_value_jpy": 99500,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "cancellation_high"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-007",
+    "hotel_id": "JP-DEMO-008",
+    "platform": "yahoo",
+    "name": "Sendai Demo Hotel 8 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 266,
+    "gross_attributed_booking_value_jpy": 100250,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "report_due"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-008",
+    "hotel_id": "JP-DEMO-009",
+    "platform": "meta",
+    "name": "Naha Demo Hotel 9 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 90000,
+    "clicks_30d": 274,
+    "gross_attributed_booking_value_jpy": 101000,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "report_due"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-009",
+    "hotel_id": "JP-DEMO-010",
+    "platform": "google",
+    "name": "Kobe Demo Hotel 10 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 282,
+    "gross_attributed_booking_value_jpy": 101750,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-010",
+    "hotel_id": "JP-DEMO-011",
+    "platform": "yahoo",
+    "name": "Yokohama Demo Hotel 11 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 290,
+    "gross_attributed_booking_value_jpy": 0,
+    "attributed_bookings": 0,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-011",
+    "hotel_id": "JP-DEMO-012",
+    "platform": "meta",
+    "name": "Kawasaki Demo Hotel 12 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 298,
+    "gross_attributed_booking_value_jpy": 103250,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-012",
+    "hotel_id": "JP-DEMO-013",
+    "platform": "google",
+    "name": "Hakone Demo Hotel 13 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 90000,
+    "clicks_30d": 306,
+    "gross_attributed_booking_value_jpy": 104000,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-013",
+    "hotel_id": "JP-DEMO-014",
+    "platform": "yahoo",
+    "name": "Nikko Demo Hotel 14 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 314,
+    "gross_attributed_booking_value_jpy": 104750,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-014",
+    "hotel_id": "JP-DEMO-015",
+    "platform": "meta",
+    "name": "Hiroshima Demo Hotel 15 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 322,
+    "gross_attributed_booking_value_jpy": 105500,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-015",
+    "hotel_id": "JP-DEMO-016",
+    "platform": "google",
+    "name": "Nara Demo Hotel 16 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 330,
+    "gross_attributed_booking_value_jpy": 0,
+    "attributed_bookings": 0,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-016",
+    "hotel_id": "JP-DEMO-017",
+    "platform": "yahoo",
+    "name": "Kamakura Demo Hotel 17 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 90000,
+    "clicks_30d": 338,
+    "gross_attributed_booking_value_jpy": 107000,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-017",
+    "hotel_id": "JP-DEMO-018",
+    "platform": "meta",
+    "name": "Chiba Demo Hotel 18 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 346,
+    "gross_attributed_booking_value_jpy": 107750,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-018",
+    "hotel_id": "JP-DEMO-019",
+    "platform": "google",
+    "name": "Nagano Demo Hotel 19 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 354,
+    "gross_attributed_booking_value_jpy": 108500,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-019",
+    "hotel_id": "JP-DEMO-020",
+    "platform": "yahoo",
+    "name": "Shizuoka Demo Hotel 20 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 362,
+    "gross_attributed_booking_value_jpy": 109250,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-020",
+    "hotel_id": "JP-DEMO-021",
+    "platform": "meta",
+    "name": "Kumamoto Demo Hotel 21 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 90000,
+    "clicks_30d": 370,
+    "gross_attributed_booking_value_jpy": 0,
+    "attributed_bookings": 0,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-021",
+    "hotel_id": "JP-DEMO-022",
+    "platform": "google",
+    "name": "Oita Demo Hotel 22 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 378,
+    "gross_attributed_booking_value_jpy": 110750,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-022",
+    "hotel_id": "JP-DEMO-023",
+    "platform": "yahoo",
+    "name": "Niigata Demo Hotel 23 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 386,
+    "gross_attributed_booking_value_jpy": 111500,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-023",
+    "hotel_id": "JP-DEMO-024",
+    "platform": "meta",
+    "name": "Matsumoto Demo Hotel 24 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 40000,
+    "clicks_30d": 394,
+    "gross_attributed_booking_value_jpy": 112250,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "campaign_id": "C-024",
+    "hotel_id": "JP-DEMO-025",
+    "platform": "google",
+    "name": "Takamatsu Demo Hotel 25 Acquisition",
+    "monthly_budget_jpy": 80000,
+    "spend_30d_jpy": 90000,
+    "clicks_30d": 402,
+    "gross_attributed_booking_value_jpy": 113000,
+    "attributed_bookings": 4,
+    "rule_tags": [
+      "healthy"
+    ],
+    "data_mode": "demo"
+  }
+]

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+*.egg-info/
+reports/
+*.sqlite
+.pytest_cache/
+*:Zone.Identifier
+.specify/workflows/runs/

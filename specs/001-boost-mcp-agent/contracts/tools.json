@@ -1,0 +1,183 @@
+{
+  "contract_version": "1.0-demo",
+  "assumptions": [
+    "namespaced MCP tool names map to one physical MCP v2 process",
+    "all tool responses carry data_mode=demo and timestamps",
+    "server-authenticated principal is not supplied as mutable tool input"
+  ],
+  "tools": [
+    {
+      "name": "ads.list_managed_hotels",
+      "risk": "read",
+      "input": {
+        "limit": "integer optional"
+      },
+      "output": {
+        "hotels": "Hotel[]",
+        "count": "integer"
+      }
+    },
+    {
+      "name": "ads.get_portfolio_campaign_summary",
+      "risk": "read",
+      "input": {
+        "date_from": "YYYY-MM-DD",
+        "date_to": "YYYY-MM-DD"
+      },
+      "output": {
+        "rows": "CampaignSummary[]",
+        "source_system": "mock_ads"
+      }
+    },
+    {
+      "name": "ads.get_campaign_performance",
+      "risk": "read",
+      "input": {
+        "hotel_id": "string",
+        "campaign_ids": "string[] optional"
+      },
+      "output": {
+        "campaigns": "CampaignSummary[]"
+      }
+    },
+    {
+      "name": "ads.get_campaign_budget",
+      "risk": "read",
+      "input": {
+        "hotel_id": "string",
+        "campaign_id": "string"
+      },
+      "output": {
+        "monthly_budget_jpy": "integer",
+        "budget_version": "integer"
+      }
+    },
+    {
+      "name": "book.get_reservations",
+      "risk": "read",
+      "input": {
+        "hotel_id": "string",
+        "campaign_ids": "string[] optional"
+      },
+      "output": {
+        "reservations": "Booking[]",
+        "attribution_coverage": "number"
+      }
+    },
+    {
+      "name": "book.get_portfolio_retained_outcomes",
+      "risk": "read",
+      "input": {
+        "hotel_id": "string optional; selects one managed hotel",
+        "hotel_ids": "string[] optional; omit both to select all managed hotels"
+      },
+      "output": {
+        "rows": "RetainedOutcome[]"
+      }
+    },
+    {
+      "name": "growth.calculate_campaign_economics",
+      "risk": "read",
+      "input": {
+        "hotel_id": "string",
+        "variable_cost_ratio": "number 0..1"
+      },
+      "output": {
+        "campaign_economics": "CampaignEconomics[]",
+        "historical_not_incremental": "boolean"
+      }
+    },
+    {
+      "name": "growth.audit_portfolio",
+      "risk": "read",
+      "input": {
+        "period": "last_30_days"
+      },
+      "output": {
+        "alerts": "Alert[] with rule and evidence",
+        "hotels_analyzed": "integer"
+      }
+    },
+    {
+      "name": "growth.generate_monthly_report",
+      "risk": "local_file",
+      "input": {
+        "hotel_id": "string or all",
+        "period": "YYYY-MM"
+      },
+      "output": {
+        "report_path": "local path",
+        "included_sources": "string[]"
+      }
+    },
+    {
+      "name": "growth.propose_reallocation",
+      "risk": "prepare",
+      "input": {
+        "hotel_id": "string",
+        "from_campaign_id": "string",
+        "to_campaign_id": "string",
+        "amount_jpy": "positive integer",
+        "budget_type": "monthly"
+      },
+      "output": {
+        "proposal_id": "string",
+        "status": "PENDING_APPROVAL",
+        "before": "budgets",
+        "after": "budgets",
+        "expires_at": "ISO timestamp",
+        "rationale": "string",
+        "warning": "historical performance is not causal uplift"
+      }
+    },
+    {
+      "name": "growth.approve_proposal",
+      "risk": "approve",
+      "input": {
+        "proposal_id": "string",
+        "explicit_confirmation": "boolean"
+      },
+      "output": {
+        "proposal_id": "string",
+        "status": "APPROVED",
+        "approved_by": "verified principal"
+      }
+    },
+    {
+      "name": "ads.execute_mock_reallocation",
+      "risk": "write",
+      "input": {
+        "proposal_id": "string",
+        "idempotency_key": "string"
+      },
+      "output": {
+        "receipt_id": "string",
+        "status": "EXECUTED",
+        "before": "budgets",
+        "after": "budgets",
+        "sum_unchanged": "boolean"
+      }
+    },
+    {
+      "name": "growth.get_audit_log",
+      "risk": "read",
+      "input": {
+        "hotel_id": "string optional",
+        "proposal_id": "string optional"
+      },
+      "output": {
+        "events": "AuditEvent[]"
+      }
+    },
+    {
+      "name": "growth.reset_demo",
+      "risk": "admin_only",
+      "input": {
+        "confirm": "literal RESET DEMO"
+      },
+      "output": {
+        "reset": "boolean"
+      }
+    }
+  ]
+}
