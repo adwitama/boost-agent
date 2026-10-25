@@ -1,7 +1,11 @@
 from __future__ import annotations
-import argparse, json
+
+import argparse
+import json
+
 from .server import main as server_main
 from .service import BoostService
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="tripla Boost fixture-only demo")

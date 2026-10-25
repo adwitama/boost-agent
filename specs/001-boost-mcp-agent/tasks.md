@@ -14,10 +14,10 @@
 - [X] T12 Add `DEMO DATA` and attribution-versus-incrementality disclosures to every relevant response/report.
 - [X] T13 Create optional agent instructions for selected chat host; no unverified host/tool compatibility assumptions.
 - [X] T14 Write 2-minute Pillar 1 and 3-minute Pillar 2 demo scripts, plus reset command.
-- [X] T15 Run all unit, policy and integration tests, lint, verify README quick start from clean environment.
+- [X] T15 Run all unit, policy and integration tests, lint, verify README quick start from clean environment. Fresh offline environment synced from `uv.lock`; README unittest command passed (6/6), pytest passed (6/6), Ruff passed, and Python compilation succeeded.
 
 ## Completion checklist
-- [ ] `mcp dev` or equivalent Inspector call lists tools (SDK v2 path is implemented; execution awaits PyPI connectivity)
+- [X] MCP Inspector CLI connects to the official SDK stdio server and lists all 14 tools; it also calls the hotel-list tool and reads the hotel campaign resource template.
 - [X] Portfolio query returns exactly 25 authorized accounts and at least 8 explainable alerts
 - [X] Monthly report is saved and citations/fixture row IDs appear
 - [X] Kyoto metrics are accurate before change
@@ -34,5 +34,5 @@
 - [X] T017 Add fixture validation and typed domain/request-response models per T02/T03 and plan architecture (partial)
 - [X] T018 Export CSV reports and include cited fixture row IDs in report output per T06 and completion checklist (partial)
 - [X] T019 Add automated negative tests for unauthorized actors, overspend, stale and expired proposals, and unknown hotel IDs per spec §2 and T09/T10 (partial)
-- [ ] T020 Validate the official MCP SDK v2 server path using MCP Inspector; implementation is present but package installation and Inspector run are blocked by sandbox DNS access to PyPI (partial)
+- [X] T020 Validate the official MCP SDK v2 server path using MCP Inspector CLI; latest code passed tool discovery (14 tools), `ads.list_managed_hotels`, resource-template listing, and reading the JP-KYO-001 campaign resource. Direct `mcp.ClientSession` stdio smoke test and Codex CLI hotel-list call also passed. Claude Code host integration remains unverified.
 - [X] T021 Extract `MockAdsRepository` and `MockBookRepository` interfaces from the service per plan layer decision (missing)

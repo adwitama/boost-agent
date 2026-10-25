@@ -1,5 +1,6 @@
 """Typed fixture and tool-response records used by the demo boundary."""
 from __future__ import annotations
+
 from typing import Literal, TypedDict
 
 

@@ -68,7 +68,8 @@
       "name": "book.get_portfolio_retained_outcomes",
       "risk": "read",
       "input": {
-        "hotel_ids": "string[]"
+        "hotel_id": "string optional; selects one managed hotel",
+        "hotel_ids": "string[] optional; omit both to select all managed hotels"
       },
       "output": {
         "rows": "RetainedOutcome[]"

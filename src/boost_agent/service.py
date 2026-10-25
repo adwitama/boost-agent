@@ -5,12 +5,12 @@ import hashlib
 import json
 import sqlite3
 import uuid
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from .errors import PolicyError
 from .adapters import MockAdsRepository, MockBookRepository
+from .errors import PolicyError
 
 DEMO = "DEMO DATA"
 DEFAULT_ACTOR = "demo-specialist-1"
@@ -73,7 +73,7 @@ class BoostService:
 
     @staticmethod
     def _now() -> str:
-        return datetime.now(timezone.utc).isoformat()
+        return datetime.now(UTC).isoformat()
 
     def _meta(self, hotel_id: str | None = None) -> dict[str, Any]:
         return {"source_system": "tripla_boost_mock", "data_mode": "demo", "demo_marker": DEMO,
@@ -134,13 +134,36 @@ class BoostService:
         rows = [b for b in self.bookings if b["hotel_id"] == hotel_id and (not campaign_ids or b["campaign_id"] in campaign_ids)]
         return {**self._meta(hotel_id), "reservations": rows, "attribution_coverage": 1.0}
 
-    def get_portfolio_retained_outcomes(self, hotel_ids: list[str]) -> dict[str, Any]:
-        for hotel_id in hotel_ids: self._authorize(hotel_id)
+    def get_portfolio_retained_outcomes(
+        self,
+        hotel_ids: list[str] | None = None,
+        hotel_id: str | None = None,
+    ) -> dict[str, Any]:
+        if hotel_ids is not None and hotel_id is not None:
+            raise PolicyError("provide hotel_id or hotel_ids, not both")
+        if hotel_id is not None:
+            selected_hotel_ids = [hotel_id]
+        elif isinstance(hotel_ids, str):
+            selected_hotel_ids = [hotel_ids]
+        elif hotel_ids is not None:
+            selected_hotel_ids = hotel_ids
+        else:
+            selected_hotel_ids = [
+                hotel["hotel_id"]
+                for hotel in self.hotels
+                if hotel["assigned_specialist_id"] == self.actor_id
+            ]
+        if any(not isinstance(selected_id, str) or not selected_id.strip() for selected_id in selected_hotel_ids):
+            raise PolicyError("hotel IDs must be non-empty strings")
+        selected_hotel_ids = list(dict.fromkeys(selected_hotel_ids))
+        for selected_id in selected_hotel_ids:
+            self._authorize(selected_id)
         rows = []
-        for hotel_id in hotel_ids:
-            bookings = [b for b in self.bookings if b["hotel_id"] == hotel_id]
-            rows.append({"hotel_id": hotel_id, "retained_booking_value_jpy": sum(b["gross_value_jpy"] for b in bookings if b["status"] == "retained"), "data_mode": "demo"})
-        return {**self._meta(), "rows": rows}
+        for selected_id in selected_hotel_ids:
+            bookings = [b for b in self.bookings if b["hotel_id"] == selected_id]
+            rows.append({"hotel_id": selected_id, "retained_booking_value_jpy": sum(b["gross_value_jpy"] for b in bookings if b["status"] == "retained"), "data_mode": "demo"})
+        metadata_hotel_id = selected_hotel_ids[0] if len(selected_hotel_ids) == 1 else None
+        return {**self._meta(metadata_hotel_id), "rows": rows}
 
     def calculate_campaign_economics(self, hotel_id: str, variable_cost_ratio: float = 0.30) -> dict[str, Any]:
         self._authorize(hotel_id)
@@ -209,7 +232,7 @@ class BoostService:
         with self._conn() as db:
             total = db.execute("SELECT COALESCE(SUM(monthly_budget_jpy), 0) FROM budgets WHERE hotel_id=?", (hotel_id,)).fetchone()[0]
         if total > hotel["monthly_budget_cap_jpy"]: raise PolicyError("existing allocation exceeds hotel budget cap")
-        proposal_id = str(uuid.uuid4()); expires = (datetime.now(timezone.utc) + timedelta(minutes=15)).isoformat()
+        proposal_id = str(uuid.uuid4()); expires = (datetime.now(UTC) + timedelta(minutes=15)).isoformat()
         digest = hashlib.sha256(f"{proposal_id}:{hotel_id}:{from_campaign_id}:{to_campaign_id}:{amount_jpy}:{source['version']}:{destination['version']}".encode()).hexdigest()
         with self._conn() as db:
             db.execute("INSERT INTO proposals VALUES (?, ?, ?, ?, ?, ?, ?, 'PENDING_APPROVAL', ?, NULL, ?, ?, NULL)", (proposal_id, hotel_id, from_campaign_id, to_campaign_id, amount_jpy, source["version"], destination["version"], self.actor_id, expires, digest))
@@ -225,7 +248,7 @@ class BoostService:
             if not proposal: raise PolicyError("unknown proposal")
             self._authorize(proposal["hotel_id"])
             if proposal["status"] != "PENDING_APPROVAL": raise PolicyError("proposal cannot be approved in its current state")
-            if datetime.fromisoformat(proposal["expires_at"]) <= datetime.now(timezone.utc): raise PolicyError("proposal has expired")
+            if datetime.fromisoformat(proposal["expires_at"]) <= datetime.now(UTC): raise PolicyError("proposal has expired")
             db.execute("UPDATE proposals SET status='APPROVED', approved_by=? WHERE proposal_id=?", (self.actor_id, proposal_id))
         self._audit("approve_proposal", "APPROVED", proposal["hotel_id"], proposal_id)
         return {**self._meta(proposal["hotel_id"]), "proposal_id": proposal_id, "status": "APPROVED", "approved_by": self.actor_id}
@@ -239,7 +262,7 @@ class BoostService:
             if not p: raise PolicyError("unknown proposal")
             self._authorize(p["hotel_id"])
             if p["status"] != "APPROVED": raise PolicyError("proposal is not approved")
-            if datetime.fromisoformat(p["expires_at"]) <= datetime.now(timezone.utc): raise PolicyError("proposal has expired")
+            if datetime.fromisoformat(p["expires_at"]) <= datetime.now(UTC): raise PolicyError("proposal has expired")
             a = db.execute("SELECT * FROM budgets WHERE campaign_id=?", (p["from_campaign_id"],)).fetchone(); b = db.execute("SELECT * FROM budgets WHERE campaign_id=?", (p["to_campaign_id"],)).fetchone()
             if a["version"] != p["from_version"] or b["version"] != p["to_version"]: raise PolicyError("proposal is stale")
             before = {a["campaign_id"]: a["monthly_budget_jpy"], b["campaign_id"]: b["monthly_budget_jpy"]}

@@ -1,6 +1,7 @@
 import tempfile
 import unittest
 from pathlib import Path
+
 from boost_agent.errors import PolicyError
 from boost_agent.server import ProtocolMCPServer
 from boost_agent.service import BoostService
