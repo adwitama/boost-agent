@@ -1,0 +1,300 @@
+[
+  {
+    "hotel_id": "JP-KYO-001",
+    "name": "Kyoto Riverside (Demo)",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 250000,
+    "allowed_platforms": [
+      "google"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-002",
+    "name": "Tokyo Demo Hotel 2",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-003",
+    "name": "Nagoya Demo Hotel 3",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-004",
+    "name": "Osaka Demo Hotel 4",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-005",
+    "name": "Sapporo Demo Hotel 5",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-006",
+    "name": "Fukuoka Demo Hotel 6",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-007",
+    "name": "Kanazawa Demo Hotel 7",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-008",
+    "name": "Sendai Demo Hotel 8",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-009",
+    "name": "Naha Demo Hotel 9",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-010",
+    "name": "Kobe Demo Hotel 10",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-011",
+    "name": "Yokohama Demo Hotel 11",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-012",
+    "name": "Kawasaki Demo Hotel 12",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-013",
+    "name": "Hakone Demo Hotel 13",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-014",
+    "name": "Nikko Demo Hotel 14",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-015",
+    "name": "Hiroshima Demo Hotel 15",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-016",
+    "name": "Nara Demo Hotel 16",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-017",
+    "name": "Kamakura Demo Hotel 17",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-018",
+    "name": "Chiba Demo Hotel 18",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-019",
+    "name": "Nagano Demo Hotel 19",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-020",
+    "name": "Shizuoka Demo Hotel 20",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-021",
+    "name": "Kumamoto Demo Hotel 21",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-022",
+    "name": "Oita Demo Hotel 22",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-023",
+    "name": "Niigata Demo Hotel 23",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-024",
+    "name": "Matsumoto Demo Hotel 24",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  },
+  {
+    "hotel_id": "JP-DEMO-025",
+    "name": "Takamatsu Demo Hotel 25",
+    "assigned_specialist_id": "demo-specialist-1",
+    "monthly_budget_cap_jpy": 120000,
+    "allowed_platforms": [
+      "google",
+      "yahoo",
+      "meta"
+    ],
+    "data_mode": "demo"
+  }
+]
